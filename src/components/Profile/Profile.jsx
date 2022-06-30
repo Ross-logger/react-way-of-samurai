@@ -1,15 +1,13 @@
 import React from "react";
 import MyPosts from "./MyPosts/MyPosts";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-const Profile = () => {
+
+const Profile = (props) => {
     return (
-        <div >
-            <img
-                src='https://d32ijn7u0aqfv4.cloudfront.net/wp/wp-content/uploads/raw/young-woman-walking-down-palm-trees-street-revealing-downtown-los-picture-id1143355576-1.jpg'/>
-            <div>
-                ava + description
-            </div>
-            <MyPosts/>
+        <div>
+            <ProfileInfo/>
+            <MyPosts postsData={props.state.postsData}/>
         </div>)
 }
 export default Profile;
